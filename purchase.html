@@ -1,0 +1,193 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Wyxil Scripts Store</title>
+      <style>
+          body {
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              margin: 0;
+              padding: 20px;
+              background: linear-gradient(135deg, #1a1a2e, #16213e);
+              color: #fff;
+              min-height: 100vh;
+          }
+          .container {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+              gap: 30px;
+              max-width: 1200px;
+              margin: 0 auto;
+              padding: 20px;
+          }
+          .panel {
+              background: rgba(255, 255, 255, 0.1);
+              backdrop-filter: blur(10px);
+              border-radius: 20px;
+              padding: 30px;
+              border: 1px solid rgba(255, 255, 255, 0.1);
+              text-align: center;
+              transform: translateY(0);
+              transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          }
+          .panel:hover {
+              transform: translateY(-15px) scale(1.02);
+              box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+              border: 1px solid rgba(255, 255, 255, 0.2);
+          }
+          .price {
+              font-size: 36px;
+              font-weight: bold;
+              color: #4fd1c5;
+              margin: 20px 0;
+              text-shadow: 0 0 10px rgba(79, 209, 197, 0.5);
+              animation: glow 2s infinite;
+          }
+          @keyframes glow {
+              0% { text-shadow: 0 0 10px rgba(79, 209, 197, 0.5); }
+              50% { text-shadow: 0 0 20px rgba(79, 209, 197, 0.8); }
+              100% { text-shadow: 0 0 10px rgba(79, 209, 197, 0.5); }
+          }
+          .features {
+              list-style: none;
+              padding: 0;
+              margin: 25px 0;
+          }
+          .features li {
+              margin: 15px 0;
+              color: #cbd5e0;
+              position: relative;
+              padding-left: 20px;
+          }
+          .features li::before {
+              content: '→';
+              position: absolute;
+              left: 0;
+              color: #4fd1c5;
+          }
+          .buy-button {
+              background: linear-gradient(45deg, #4fd1c5, #38b2ac);
+              color: white;
+              padding: 15px 30px;
+              border: none;
+              border-radius: 30px;
+              cursor: pointer;
+              font-size: 16px;
+              font-weight: bold;
+              transition: all 0.3s;
+              position: relative;
+              overflow: hidden;
+          }
+          .buy-button::before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: -100%;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+              transition: 0.5s;
+          }
+          .buy-button:hover::before {
+              left: 100%;
+          }
+          .buy-button:hover {
+              transform: translateY(-3px);
+              box-shadow: 0 10px 20px rgba(79, 209, 197, 0.3);
+          }
+          .payment-methods {
+              margin-top: 60px;
+              text-align: center;
+              background: rgba(255, 255, 255, 0.05);
+              padding: 30px;
+              border-radius: 15px;
+          }
+          .payment-icons {
+              display: flex;
+              justify-content: center;
+              gap: 30px;
+              margin-top: 20px;
+          }
+          .payment-icons img {
+              height: 50px;
+              filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
+              transition: all 0.4s;
+          }
+          .payment-icons img:hover {
+              transform: translateY(-5px) scale(1.1);
+              filter: drop-shadow(0 0 15px rgba(255,255,255,0.5));
+          }
+          h1 {
+              text-align: center;
+              color: #fff;
+              font-size: 3em;
+              margin-bottom: 50px;
+              text-transform: uppercase;
+              letter-spacing: 3px;
+              animation: fadeInDown 1s ease-out;
+          }
+          @keyframes fadeInDown {
+              from { opacity: 0; transform: translateY(-50px); }
+              to { opacity: 1; transform: translateY(0); }
+          }
+          h2 {
+              color: #fff;
+              font-size: 1.8em;
+              margin-bottom: 20px;
+          }
+          h3 {
+              color: #4fd1c5;
+              font-size: 1.5em;
+          }
+      </style>
+  </head>
+  <body>
+      <h1>Wyxil Scripts</h1>
+    
+      <div class="container">
+          <div class="panel">
+              <h2>SOON</h2>
+              <div class="price">$0</div>
+              <ul class="features">
+                  <li>SOON</li>
+                  <li>SOON</li>
+                  <li>SOON</li>
+                  <li>SOON</li>
+              </ul>
+              <button class="buy-button">Purchase Now</button>
+          </div>
+
+          <div class="panel">
+              <h2>SOON</h2>
+              <div class="price">$0</div>
+              <ul class="features">
+                  <li>SOON</li>
+                  <li>SOON</li>
+                  <li>SOON</li>
+                  <li>SOON</li>
+              </ul>
+              <button class="buy-button">PURCHASE SOON</button>
+          </div>
+
+          <div class="panel">
+              <h2>SOON</h2>
+              <div class="price">$0</div>
+              <ul class="features">
+                  <li>SOON</li>
+                  <li>SOON</li>
+                  <li>SOON</li>
+                  <li>SOON</li>
+              </ul>
+              <button class="buy-button">PURCHASE SOON</button>
+          </div>
+      </div>
+
+      <div class="payment-methods">
+          <h3>Accepted Payment Methods</h3>
+          <div class="payment-icons">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Robux_2019_Logo_gold.svg" alt="Robux">
+          </div>
+      </div>
+  </body>
+  </html>
